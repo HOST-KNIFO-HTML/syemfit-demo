@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro Geral</title>
+</head>
+<body>
+    <h1>Cadastro Geral</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label>Nome:</label><input type="text" name="nome"><br>
+        <label>Idade:</label><input type="number" name="idade"><br>
+        <label>Contato:</label><input type="text" name="contato"><br>
+        <label>Tipo:</label>
+        <select name="tipo">
+            <option value="aluno">Aluno</option>
+            <option value="profissional">Profissional</option>
+            <option value="socio">Sócio</option>
+        </select><br>
+        <label>Plano:</label><input type="text" name="plano"><br>
+        <label>Observações:</label><textarea name="observacoes"></textarea><br>
+        <label>Foto:</label><input type="file" name="foto"><br>
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualizar Cadastro</title>
+</head>
+<body>
+    <h1>Ficha de Cadastro: {{ aluno.nome }}</h1>
+    <img src="{{ url_for('static', filename='fotos/' + aluno.foto) }}" width="200" alt="Foto do Aluno"><br>
+    <p><strong>ID:</strong> {{ aluno.id }}</p>
+    <p><strong>Tipo:</strong> {{ aluno.tipo }}</p>
+    <p><strong>Idade:</strong> {{ aluno.idade }}</p>
+    <p><strong>Observações:</strong> {{ aluno.observacoes }}</p>
+    <a href="/cadastros">← Voltar para a lista</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>SYEMFIT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>SYEMFIT</h1>
+        <p>Sistema Inteligente de Gestão Fitness</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Início</a></li>
+            <li><a href="{{ url_for('cadastro') }}">Cadastro</a></li>
+            <li><a href="{{ url_for('assinaturas') }}">Assinaturas</a></li>
+            <li><a href="{{ url_for('financeiro') }}">Financeiro</a></li>
+            <li><a href="{{ url_for('acesso') }}">Acesso</a></li>
+            <li><a href="{{ url_for('agendamentos') }}">Agendamentos</a></li>
+            <li><a href="{{ url_for('relatorios') }}">Relatórios</a></li>
+            <li><a href="{{ url_for('backup') }}">Backup</a></li>
+            <li><a href="{{ url_for('usuarios') }}">Usuários</a></li>
+            <li><a href="{{ url_for('configuracoes') }}">Configurações</a></li>
+            <li><a href="{{ url_for('integracoes') }}">Integrações</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

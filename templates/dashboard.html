@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>SYEMFIT • Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 SYEMFIT ACCESS</h1>
+            <p>Controle de acesso integrado ao SYEMCORE</p>
+        </header>
+
+        <section class="card">
+            <h2>🔒 Acesso liberado!</h2>
+            <p>Bem-vindo, <strong>{{ session['user'] }}</strong></p>
+            <a class="btn" href="/logout">Encerrar sessão</a>
+        </section>
+
+        <footer>
+            <small>Powered by SYEMCORE | {{ datetime }}</small>
+        </footer>
+    </div>
+</body>
+</html>

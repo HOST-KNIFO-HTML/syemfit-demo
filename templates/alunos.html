@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Lista de Alunos</h2>
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Foto</th>
+    <th>Nome</th>
+    <th>Idade</th>
+    <th>Telefone</th>
+    <th>Observações</th>
+  </tr>
+  {% for aluno in alunos %}
+  <tr>
+    <td>
+      {% if aluno.foto %}
+        <img src="{{ url_for('static', filename='fotos/' + aluno.foto) }}" width="100">
+      {% else %}
+        -
+      {% endif %}
+    </td>
+    <td>{{ aluno.nome }}</td>
+    <td>{{ aluno.idade }}</td>
+    <td>{{ aluno.telefone }}</td>
+    <td>{{ aluno.observacoes }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

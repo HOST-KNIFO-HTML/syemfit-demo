@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Listagem Geral</title></head>
+<body style="background-color: black; color: white;">
+    <h1>Lista Geral</h1>
+    <form method="get" action="/cadastros">
+        <label for="tipo">Filtrar por tipo:</label>
+        <select name="tipo">
+            <option value="">Todos</option>
+            <option value="aluno">Aluno</option>
+            <option value="profissional">Profissional</option>
+            <option value="sócio">Sócio</option>
+        </select>
+        <input type="submit" value="Filtrar">
+    </form>
+    <ul>
+        {% for item in cadastros %}
+            <li>{{ item[1] }} - {{ item[5] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

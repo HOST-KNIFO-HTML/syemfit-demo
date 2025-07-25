@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Aluno</title>
+</head>
+<body>
+    <h1>Editar Aluno</h1>
+    <form action="{{ url_for('editar_aluno', id=aluno.id) }}" method="post" enctype="multipart/form-data">
+        Nome: <input type="text" name="nome" value="{{ aluno.nome }}"><br>
+        Idade: <input type="number" name="idade" value="{{ aluno.idade }}"><br>
+        Observações: <textarea name="observacoes">{{ aluno.observacoes }}</textarea><br>
+        Atualizar Foto: <input type="file" name="foto"><br>
+        <input type="submit" value="Salvar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<h2>Novo Usuário</h2>
+<form method="post">
+    Nome: <input name="nome"><br>
+    Email: <input name="email"><br>
+    Senha: <input name="senha" type="password"><br>
+    <button type="submit">Salvar</button>
+</form>
